@@ -1,0 +1,9 @@
+.header {
+  padding: 16px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+}
