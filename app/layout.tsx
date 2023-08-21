@@ -1,9 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Atkinson_Hyperlegible } from "next/font/google";
 import Header from "./components/Header/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const atkinson = Atkinson_Hyperlegible({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={atkinson.className}>
         <Header />
         {children}
       </body>
