@@ -1,15 +1,16 @@
 import { getSortedDairyPostsData } from "@/lib/dairyPosts";
+import PostItem from "../PostItem/PostItem";
 
 export default function PostsList() {
   const dairyPosts = getSortedDairyPostsData();
   return (
     <section>
       <h2>My latest thoughts:</h2>
-      <div>
+      <ul>
         {dairyPosts.map((post: DairyPost) => (
-          <p key={post.id}>{post.title}</p>
+          <PostItem key={post.id} dairyPost={post} />
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
