@@ -7,3 +7,10 @@
   justify-content: flex-end;
   gap: 32px;
 }
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+.nav-links a:active {
+  opacity: 0.9;
+}
