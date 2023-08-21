@@ -1,0 +1,9 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-top: 3rem;
+}
