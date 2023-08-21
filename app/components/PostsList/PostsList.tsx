@@ -1,5 +1,5 @@
 import { getSortedDairyPostsData } from "@/lib/dairyPosts";
-import PostItem from "../PostItem/PostItem";
+import PostCard from "../PostCard/PostCard";
 
 export default function PostsList() {
   const dairyPosts = getSortedDairyPostsData();
@@ -8,7 +8,7 @@ export default function PostsList() {
       <h2>My latest thoughts:</h2>
       <ul>
         {dairyPosts.map((post: DairyPost) => (
-          <PostItem key={post.id} dairyPost={post} />
+          <PostCard key={post.id} dairyPost={post} />
         ))}
       </ul>
     </section>
