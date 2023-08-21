@@ -18,11 +18,18 @@ export default async function PostDetail({
   const { title, date, contentHtml } = await getPostData(params.id);
   const formattedDate = getFormattedDate(date);
   return (
-    <article className={styles["content-wrapper"]}>
-      <h2>{title}</h2>
-      <span>{formattedDate}</span>
-      <section dangerouslySetInnerHTML={{ __html: contentHtml }}></section>
-      <Link href="/">Back to home page</Link>
-    </article>
+    <>
+      <article className={styles["content-wrapper"]}>
+        <h2>{title}</h2>
+        <span>{formattedDate}</span>
+        <section
+          className={styles["injected-html"]}
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+        ></section>
+      </article>
+      <Link className={styles["redirect-link"]} href="/">
+        Back to home page
+      </Link>
+    </>
   );
 }
