@@ -1,0 +1,19 @@
+.card {
+  margin-top: 0;
+  color: black;
+  background-color: rgb(231, 206, 21);
+  margin-top: 2rem;
+  border-radius: 15px;
+}
+
+.card {
+  display: block;
+  padding: 1rem 1.2rem;
+  transition: 0.2s transform ease-in-out;
+}
+.card:hover {
+  transform: scale(1.15);
+}
+.card:active {
+  background-color: rgba(231, 207, 21, 0.825);
+}
